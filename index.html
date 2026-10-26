@@ -1,0 +1,3085 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="记账">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#f2f4f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0f13" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>记账</title>
+
+<script>
+/* 首屏主题：在样式生效前就定好，避免白闪 */
+(function () {
+  try {
+    var s = JSON.parse(localStorage.getItem('jizhang_v1') || '{}');
+    var t = s && s.theme ? s.theme : 'auto';
+    var dark = t === 'dark' || (t === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
+
+<style>
+/* ============================ 主题 ============================ */
+:root[data-theme="light"] {
+  --bg: #f2f4f7;
+  --bg-2: #e9edf3;
+  --card: #ffffff;
+  --card-2: #f7f9fb;
+  --text: #10131a;
+  --text-2: #47505f;
+  --muted: #7b8494;
+  --line: #e8ebf0;
+  --line-2: #dfe4ec;
+  --accent: #2f7cf6;
+  --accent-soft: #e8f0fe;
+  --ok: #12a06b;
+  --ok-soft: #e4f7ef;
+  --danger: #e5484d;
+  --danger-soft: #fdeaea;
+  --warn: #d97706;
+  --warn-soft: #fef3e2;
+  --shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 10px 28px -18px rgba(16, 24, 40, .18);
+  --shadow-lg: 0 2px 6px rgba(16, 24, 40, .06), 0 18px 40px -20px rgba(16, 24, 40, .24);
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #0d0f13;
+  --bg-2: #13161c;
+  --card: #171a21;
+  --card-2: #1d212a;
+  --text: #e9ecf1;
+  --text-2: #b6bfcd;
+  --muted: #8b93a3;
+  --line: #262b34;
+  --line-2: #2f3540;
+  --accent: #4d8dff;
+  --accent-soft: #16233c;
+  --ok: #35c98f;
+  --ok-soft: #10261e;
+  --danger: #ff6369;
+  --danger-soft: #2a1416;
+  --warn: #f0a94a;
+  --warn-soft: #2a1f0f;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 28px -18px rgba(0, 0, 0, .6);
+  --shadow-lg: 0 2px 6px rgba(0, 0, 0, .36), 0 18px 40px -20px rgba(0, 0, 0, .7);
+  color-scheme: dark;
+}
+
+/* ============================ 基础 ============================ */
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+input, textarea, select {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 12px;
+  border: 1px solid var(--line-2);
+  background: var(--card);
+  color: var(--text);
+  padding: 12px 14px;
+  width: 100%;
+  outline: none;
+  font-size: 16px; /* iOS 上小于 16px 聚焦会放大页面 */
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent);
+}
+textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+::placeholder {
+  color: var(--muted);
+}
+
+/* ============================ 骨架 ============================ */
+#views {
+  padding: calc(env(safe-area-inset-top) + 4px) 16px
+           calc(64px + env(safe-area-inset-bottom) + 16px);
+  max-width: 560px;
+  margin: 0 auto;
+}
+.view {
+  display: none;
+  animation: fade .18s ease;
+}
+.view.on {
+  display: block;
+}
+@keyframes fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
+.page-head {
+  padding: 12px 2px 14px;
+}
+.page-head h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -.3px;
+}
+.page-head p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+}
+.card-tight {
+  padding: 13px 16px;
+}
+.card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: .2px;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-title b {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.muted { color: var(--muted); }
+.small { font-size: 12.5px; }
+.tiny { font-size: 11.5px; }
+.mono {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+.num { font-variant-numeric: tabular-nums; }
+.hide { display: none !important; }
+
+/* ============================ 首页 ============================ */
+.hero {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 22px 20px 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-label {
+  font-size: 13.5px;
+  color: var(--muted);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-amt {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 6px 0 2px;
+}
+.hero-amt .cur {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text-2);
+  transform: translateY(-6px);
+}
+.hero-amt .val {
+  font-size: 56px;
+  font-weight: 750;
+  letter-spacing: -2.4px;
+  line-height: 1.06;
+  font-variant-numeric: tabular-nums;
+  color: var(--ok);
+  transition: color .2s;
+}
+.hero.is-over .hero-amt .val { color: var(--danger); }
+.hero.is-warn .hero-amt .val { color: var(--warn); }
+.hero-amt .val.sm { font-size: 44px; letter-spacing: -1.7px; }
+.hero-amt .val.xs { font-size: 36px; letter-spacing: -1.3px; }
+.hero-sub {
+  font-size: 13px;
+  color: var(--muted);
+  min-height: 20px;
+}
+.hero.is-over .hero-sub { color: var(--danger); font-weight: 600; }
+
+.bar {
+  height: 10px;
+  border-radius: 99px;
+  background: var(--bg-2);
+  overflow: hidden;
+  margin: 16px 0 8px;
+}
+.bar > i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: var(--ok);
+  width: 0;
+  transition: width .35s cubic-bezier(.3, .9, .3, 1), background .2s;
+}
+.bar.is-warn > i { background: var(--warn); }
+.bar.is-over > i { background: var(--danger); }
+
+.hero-foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+/* 待报销条 */
+.reimb-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--warn-soft);
+  border-radius: 16px;
+  padding: 13px 16px;
+  margin-bottom: 14px;
+  width: 100%;
+  text-align: left;
+}
+.reimb-strip .ico {
+  font-size: 20px;
+  line-height: 1;
+}
+.reimb-strip .txt {
+  flex: 1;
+  min-width: 0;
+}
+.reimb-strip .t1 {
+  display: block;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--warn);
+  font-weight: 600;
+}
+.reimb-strip .t2 {
+  display: block;
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.reimb-strip .amt {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--warn);
+  font-variant-numeric: tabular-nums;
+}
+.reimb-strip .arrow {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* 记录列表 */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+}
+.row:last-child { border-bottom: 0; }
+.row-ico {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--card-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex: none;
+}
+.row-main { flex: 1; min-width: 0; }
+/* 这两行是 <span>，必须显式 block，否则会挤成一行、ellipsis 也不生效 */
+.row-t1 {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 550;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.row-t2 {
+  display: block;
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--muted);
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.row-amt {
+  font-size: 16px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+.row-amt.neg { color: var(--text); }
+.row-del {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  color: var(--muted);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2px;
+}
+.row-del:active { background: var(--danger-soft); color: var(--danger); }
+
+.empty {
+  text-align: center;
+  padding: 30px 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.empty .e-ico { font-size: 30px; display: block; margin-bottom: 8px; opacity: .6; }
+
+/* 状态标签 */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.tag.draft { background: var(--warn-soft); color: var(--warn); }
+.tag.sent { background: var(--accent-soft); color: var(--accent); }
+.tag.paid { background: var(--ok-soft); color: var(--ok); }
+.tag.dup { background: var(--danger-soft); color: var(--danger); }
+.tag.self { background: var(--bg-2); color: var(--text-2); }
+
+/* ============================ 记账 ============================ */
+.amount-wrap {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+}
+.amount-label {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.amount-input {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.amount-input span {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+.amount-input input {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: -1.6px;
+  font-variant-numeric: tabular-nums;
+  border-radius: 0;
+}
+.amount-input input:focus { border: 0; }
+
+.seg {
+  display: flex;
+  gap: 6px;
+  background: var(--bg-2);
+  padding: 4px;
+  border-radius: 13px;
+}
+.seg button {
+  flex: 1;
+  padding: 9px 8px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  transition: .15s;
+}
+.seg button.on {
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+.seg button.on[data-kind="reimb"] { color: var(--warn); }
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.cat-grid button {
+  padding: 11px 4px 9px;
+  border-radius: 13px;
+  background: var(--card-2);
+  border: 1.5px solid transparent;
+  font-size: 12px;
+  color: var(--text-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  transition: .14s;
+}
+.cat-grid button .ci { font-size: 19px; line-height: 1.1; }
+.cat-grid button.on {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 16.5px;
+  font-weight: 650;
+  background: var(--accent);
+  color: #fff;
+  transition: .15s;
+}
+.btn:active { transform: scale(.985); opacity: .9; }
+.btn[disabled] { opacity: .45; pointer-events: none; }
+.btn.ghost {
+  background: var(--card);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.btn.danger { background: var(--danger-soft); color: var(--danger); }
+.btn.sm {
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 9px 15px;
+  font-size: 13.5px;
+  border-radius: 11px;
+}
+
+/* ============================ 报销 ============================ */
+.stat3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.stat3 > div {
+  background: var(--card);
+  border-radius: 15px;
+  padding: 12px 10px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.stat3 .k {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+.stat3 .v {
+  font-size: 17px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.reimb-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.reimb-item:last-child { border-bottom: 0; }
+.reimb-item .body {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+.reimb-item .l1 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14.5px;
+  font-weight: 550;
+}
+.reimb-item .l2 {
+  display: block;
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.reimb-item .amt {
+  font-size: 16px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+.reimb-item .st-btn {
+  flex: none;
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid var(--line-2);
+  color: var(--muted);
+}
+.reimb-item .st-btn:active { background: var(--bg-2); }
+
+/* ============================ 统计 ============================ */
+.big-stat {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+.big-stat .n {
+  font-size: 34px;
+  font-weight: 750;
+  letter-spacing: -1.2px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.15;
+}
+.big-stat .side {
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.cat-bar {
+  margin-bottom: 11px;
+}
+.cat-bar:last-child { margin-bottom: 0; }
+.cat-bar .top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.cat-bar .top .l { color: var(--text-2); }
+.cat-bar .top .r { color: var(--muted); font-variant-numeric: tabular-nums; }
+.cat-bar .track {
+  height: 7px;
+  background: var(--bg-2);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.cat-bar .track > i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: var(--accent);
+  transition: width .4s cubic-bezier(.3, .9, .3, 1);
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 130px;
+  padding-top: 18px;
+  position: relative;
+}
+.chart .budget-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed var(--line-2);
+  pointer-events: none;
+}
+.chart .budget-line span {
+  position: absolute;
+  right: 0;
+  /* 压在虚线上（而不是浮在线上方），避免和最后一根柱子的数值挤在一起 */
+  top: -7px;
+  font-size: 10px;
+  line-height: 13px;
+  color: var(--muted);
+  background: var(--card);
+  padding: 0 4px;
+}
+.chart .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+.chart .bar-wrap {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.chart .bar {
+  width: 68%;
+  max-width: 26px;
+  min-height: 3px;
+  border-radius: 5px 5px 3px 3px;
+  background: var(--accent);
+  transition: height .4s cubic-bezier(.3, .9, .3, 1);
+}
+.chart .bar.over { background: var(--danger); }
+.chart .bar.zero { background: var(--bg-2); }
+.chart .col-label {
+  font-size: 10.5px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.chart .col.today .col-label { color: var(--accent); font-weight: 700; }
+.chart .col-val {
+  font-size: 9.5px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  height: 12px;
+}
+.chart .col-val.over { color: var(--danger); font-weight: 700; }
+
+/* ============================ AI ============================ */
+.ai-wrap {
+  display: flex;
+  flex-direction: column;
+  /* 给固定在底部的输入框留位置，否则最后一条消息会被挡住 */
+  padding-bottom: 78px;
+}
+.ai-msgs {
+  flex: 1;
+  padding-bottom: 10px;
+}
+.msg {
+  max-width: 86%;
+  padding: 11px 14px;
+  border-radius: 17px;
+  font-size: 14.5px;
+  line-height: 1.62;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.msg.me {
+  margin-left: auto;
+  background: var(--accent);
+  color: #fff;
+  border-bottom-right-radius: 6px;
+}
+.msg.ai {
+  background: var(--card);
+  color: var(--text);
+  border-bottom-left-radius: 6px;
+  box-shadow: var(--shadow);
+}
+.msg.err {
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 13.5px;
+  border-bottom-left-radius: 6px;
+}
+.msg .imgs-note {
+  font-size: 12px;
+  opacity: .8;
+  margin-bottom: 5px;
+}
+
+.typing {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+.typing i {
+  width: 6px;
+  height: 6px;
+  border-radius: 99px;
+  background: var(--muted);
+  animation: bounce 1.1s infinite;
+}
+.typing i:nth-child(2) { animation-delay: .15s; }
+.typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: .4; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* 待确认列表 */
+.pend {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 12px;
+  border: 1.5px solid var(--accent);
+}
+.pend-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.pend-head b { font-size: 14px; }
+.pend-sub {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.pend-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pend-item:last-of-type { border-bottom: 0; }
+.pend-item .pm { flex: 1; min-width: 0; }
+.pend-item .p1 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 550;
+}
+.pend-item .p1 .a { font-variant-numeric: tabular-nums; }
+.pend-item .p2 {
+  display: block;
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: var(--muted);
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pend-item .kbtn {
+  flex: none;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--line-2);
+  color: var(--text-2);
+  min-width: 46px;
+}
+.pend-item .kbtn.reimb {
+  color: var(--warn);
+  border-color: var(--warn);
+  background: var(--warn-soft);
+}
+.pend-item .xbtn {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.pend-foot {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ai-composer {
+  /* 用 fixed 而不是 sticky：整页是 body 滚动，sticky bottom 会跟着内容跑掉 */
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(52px + env(safe-area-inset-bottom));
+  width: 100%;
+  max-width: 560px;
+  background: var(--bg);
+  padding: 8px 16px 6px;
+  z-index: 50;
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+.ai-composer .box {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--line-2);
+  border-radius: 20px;
+  padding: 7px 12px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.ai-composer textarea {
+  border: 0;
+  padding: 4px 0;
+  background: transparent;
+  max-height: 96px;
+  min-height: 26px;
+  border-radius: 0;
+  font-size: 16px;
+}
+.ai-composer .ibtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  flex: none;
+}
+.ai-composer .ibtn:active { background: var(--bg-2); }
+.ai-composer .send {
+  width: 40px;
+  height: 40px;
+  border-radius: 99px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.ai-composer .send[disabled] { opacity: .35; pointer-events: none; }
+
+.thumbs {
+  display: flex;
+  gap: 7px;
+  padding: 0 0 8px;
+  overflow-x: auto;
+}
+.thumbs .th {
+  position: relative;
+  flex: none;
+}
+.thumbs .th img {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+.thumbs .th button {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  background: rgba(0, 0, 0, .68);
+  color: #fff;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================ 设置 ============================ */
+.set-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+.set-row:last-child { border-bottom: 0; }
+.set-row .lbl {
+  font-size: 14.5px;
+}
+.set-row .desc {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.set-row .val {
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.set-row input[type="number"] {
+  width: 100px;
+  text-align: right;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+.theme-seg {
+  display: flex;
+  gap: 5px;
+  background: var(--bg-2);
+  padding: 3px;
+  border-radius: 11px;
+}
+.theme-seg button {
+  padding: 6px 11px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.theme-seg button.on {
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+.field { margin-bottom: 12px; }
+.field label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.hint {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 6px;
+}
+.hint code {
+  background: var(--bg-2);
+  padding: 1px 5px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-family: ui-monospace, Menlo, monospace;
+}
+.note {
+  display: flex;
+  gap: 9px;
+  padding: 12px 14px;
+  border-radius: 13px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.note.warn { background: var(--warn-soft); color: var(--warn); }
+.note.danger { background: var(--danger-soft); color: var(--danger); }
+
+/* ============================ 底部导航 ============================ */
+#tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  display: flex;
+  background: var(--card);
+  /* 支持 color-mix 就做半透明毛玻璃，不支持就用不透明卡片色（老 Safari 不会变透明） */
+  background: color-mix(in srgb, var(--card) 88%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  backdrop-filter: saturate(180%) blur(18px);
+  border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+#tabbar button {
+  flex: 1;
+  padding: 7px 0 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+  transition: color .15s;
+  min-height: 52px;
+}
+#tabbar button svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+#tabbar button.on {
+  color: var(--accent);
+}
+#tabbar button.on svg { stroke-width: 2.1; }
+
+/* ============================ Toast ============================ */
+#toastWrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(72px + env(safe-area-inset-bottom));
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  padding: 0 16px;
+}
+.toast {
+  max-width: 340px;
+  background: rgba(22, 26, 33, .94);
+  color: #fff;
+  padding: 11px 16px;
+  border-radius: 13px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  box-shadow: 0 8px 28px -8px rgba(0, 0, 0, .5);
+  animation: toastIn .2s ease;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.toast.ok { background: rgba(18, 140, 96, .96); }
+.toast.err { background: rgba(200, 44, 50, .96); }
+.toast.warn { background: rgba(190, 110, 10, .96); }
+.toast button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: underline;
+  flex: none;
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(10px) scale(.96); }
+  to { opacity: 1; transform: none; }
+}
+
+/* 确认弹层 */
+#modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(0, 0, 0, .42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fade .16s ease;
+}
+#modal .sheet {
+  background: var(--card);
+  border-radius: 19px;
+  padding: 20px;
+  width: 100%;
+  max-width: 330px;
+  box-shadow: var(--shadow-lg);
+}
+#modal h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+#modal p {
+  margin: 0 0 18px;
+  font-size: 13.5px;
+  color: var(--text-2);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+#modal .acts {
+  display: flex;
+  gap: 9px;
+}
+#modal .acts .btn { padding: 12px; font-size: 15px; }
+</style>
+</head>
+
+<body>
+<main id="views">
+  <section class="view" id="v-home"></section>
+  <section class="view" id="v-add"></section>
+  <section class="view" id="v-reimb"></section>
+  <section class="view" id="v-stats"></section>
+  <section class="view" id="v-ai"></section>
+  <section class="view" id="v-set"></section>
+</main>
+<nav id="tabbar"></nav>
+<div id="toastWrap"></div>
+<input type="file" id="filePick" accept="image/*" multiple hidden>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ==================================================================
+   * 常量
+   * ================================================================== */
+
+  var LS_KEY = 'jizhang_v1';
+
+  var CATS = [
+    { id: 'food',    name: '餐饮', icon: '🍚' },
+    { id: 'shop',    name: '网购', icon: '🛍️' },
+    { id: 'traffic', name: '交通', icon: '🚌' },
+    { id: 'daily',   name: '日用', icon: '🧴' },
+    { id: 'fun',     name: '娱乐', icon: '🎮' },
+    { id: 'travel',  name: '差旅', icon: '✈️' },
+    { id: 'other',   name: '其他', icon: '📦' }
+  ];
+  var CAT_MAP = {};
+  for (var ci = 0; ci < CATS.length; ci += 1) CAT_MAP[CATS[ci].id] = CATS[ci];
+
+  var ST = {
+    draft: { name: '未提交', cls: 'draft' },
+    sent:  { name: '已提交', cls: 'sent' },
+    paid:  { name: '已到账', cls: 'paid' }
+  };
+  var ST_ORDER = ['draft', 'sent', 'paid'];
+
+  var KIND_NAME = { self: '自费', reimb: '报销' };
+
+  var TABS = [
+    { id: 'home',  label: '首页',   icon: '<path d="M3.2 10.6 12 3.4l8.8 7.2"/><path d="M5.6 9.4V20a.8.8 0 0 0 .8.8h11.2a.8.8 0 0 0 .8-.8V9.4"/>' },
+    { id: 'add',   label: '记账',   icon: '<circle cx="12" cy="12" r="8.6"/><path d="M12 8.4v7.2M8.4 12h7.2"/>' },
+    { id: 'reimb', label: '报销',   icon: '<path d="M6.2 3.6h11.6v16.8l-2.9-1.9-2.9 1.9-2.9-1.9-2.9 1.9z"/><path d="M9.2 8.2h5.6M9.2 12h5.6"/>' },
+    { id: 'stats', label: '统计',   icon: '<path d="M4 20V11.4M10 20V5M16 20v-6.2M21.4 20H2.6"/>' },
+    { id: 'ai',    label: 'AI 助手', icon: '<path d="M12 3.4l2.1 5.4 5.4 2.1-5.4 2.1L12 18.4l-2.1-5.4-5.4-2.1 5.4-2.1z"/><circle cx="18.6" cy="5.6" r="1.5"/>' },
+    { id: 'set',   label: '设置',   icon: '<circle cx="12" cy="12" r="3.1"/><path d="M12 2.6v2.6M12 18.8v2.6M2.6 12h2.6M18.8 12h2.6M5.4 5.4l1.8 1.8M16.8 16.8l1.8 1.8M18.6 5.4l-1.8 1.8M7.2 16.8l-1.8 1.8"/>' }
+  ];
+
+  /* ==================================================================
+   * 小工具
+   * ================================================================== */
+
+  function $(sel, root) {
+    return (root || document).querySelector(sel);
+  }
+
+  var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+  function esc(s) {
+    return String(s === null || s === undefined ? '' : s).replace(/[&<>"']/g, function (m) {
+      return ESC[m];
+    });
+  }
+
+  function pad2(n) {
+    return n < 10 ? '0' + n : '' + n;
+  }
+
+  function uid() {
+    return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  }
+
+  /** 本地日期键 'YYYY-MM-DD'。刻意不用 toISOString —— 那是 UTC，晚上 8 点后会把账算到明天。 */
+  function dayKey(ts) {
+    var d = new Date(ts === undefined ? Date.now() : ts);
+    return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+  }
+
+  function dayStart(ts) {
+    var d = new Date(ts === undefined ? Date.now() : ts);
+    d.setHours(0, 0, 0, 0);
+    return d.getTime();
+  }
+
+  function hhmm(ts) {
+    var d = new Date(ts);
+    return pad2(d.getHours()) + ':' + pad2(d.getMinutes());
+  }
+
+  function md(ts) {
+    var d = new Date(ts);
+    return pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+  }
+
+  /**
+   * 分 → 好看的元字符串。
+   * 整数不带小数（80），一位小数不带尾零（45.5），其余两位（12.34）。
+   * 记账 app 里「80.00」看着累。
+   */
+  function money(fen) {
+    var v = Math.round(Number(fen) || 0);
+    var neg = v < 0;
+    var a = Math.abs(v);
+    var yuan = Math.floor(a / 100);
+    var cent = a % 100;
+    var s;
+    if (cent === 0) s = String(yuan);
+    else if (cent % 10 === 0) s = yuan + '.' + (cent / 10);
+    else s = yuan + '.' + (cent < 10 ? '0' + cent : cent);
+    return (neg ? '-' : '') + s;
+  }
+
+  /** 输入框里的「元」→ 分。看不懂就返回 0。 */
+  function toFen(str) {
+    var s = String(str === null || str === undefined ? '' : str).replace(/[^\d.]/g, '');
+    if (!s) return 0;
+    var n = Number(s);
+    if (!isFinite(n) || n <= 0) return 0;
+    return Math.round(n * 100);
+  }
+
+  function sum(list) {
+    var t = 0;
+    for (var i = 0; i < list.length; i += 1) t += list[i].amt || 0;
+    return t;
+  }
+
+  function byTimeDesc(a, b) {
+    return b.time - a.time;
+  }
+
+  /* ==================================================================
+   * 状态与存储
+   * ================================================================== */
+
+  function defaultState() {
+    return {
+      v: 1,
+      budget: 8000,          // 分
+      txns: [],
+      chat: [],
+      ai: { endpoint: '', key: '', model: 'gpt-4o-mini' },
+      theme: 'auto',
+      alerted: ''            // 上次弹「用到 80%」的日期，防重复弹
+    };
+  }
+
+  var state = defaultState();
+  var storageOk = true;
+  var loadBroken = false;
+
+  function load() {
+    var raw = null;
+    try {
+      raw = localStorage.getItem(LS_KEY);
+    } catch (e) {
+      storageOk = false;
+      return;
+    }
+    if (!raw) return;
+    var obj;
+    try {
+      obj = JSON.parse(raw);
+    } catch (e) {
+      /*
+       * 数据坏了。绝不能就这么用默认值启动然后 save() ——
+       * 那等于一操作就把用户全部账目永久覆盖掉。
+       * 先把原始字符串另存一份，至少还有救。
+       */
+      loadBroken = true;
+      try {
+        localStorage.setItem(LS_KEY + '_broken_' + Date.now(), raw);
+      } catch (e2) {}
+      return;
+    }
+    if (!obj || typeof obj !== 'object') return;
+
+    state.budget = Math.max(100, Math.round(Number(obj.budget) || 8000));
+    state.theme = obj.theme === 'dark' || obj.theme === 'light' ? obj.theme : 'auto';
+    state.alerted = typeof obj.alerted === 'string' ? obj.alerted : '';
+    state.ai = {
+      endpoint: typeof obj.ai === 'object' && obj.ai ? String(obj.ai.endpoint || '') : '',
+      key: typeof obj.ai === 'object' && obj.ai ? String(obj.ai.key || '') : '',
+      model: typeof obj.ai === 'object' && obj.ai ? String(obj.ai.model || 'gpt-4o-mini') : 'gpt-4o-mini'
+    };
+
+    var list = Array.isArray(obj.txns) ? obj.txns : [];
+    state.txns = [];
+    for (var i = 0; i < list.length; i += 1) {
+      var t = list[i];
+      if (!t || !t.id) continue;
+      var amt = Math.round(Number(t.amt) || 0);
+      if (amt <= 0) continue;
+      var kind = t.kind === 'reimb' ? 'reimb' : 'self';
+      var item = {
+        id: String(t.id),
+        amt: amt,
+        kind: kind,
+        cat: CAT_MAP[t.cat] ? t.cat : 'other',
+        note: typeof t.note === 'string' ? t.note.slice(0, 60) : '',
+        time: Number(t.time) || Date.now(),
+        src: t.src === 'ai' ? 'ai' : 'manual'
+      };
+      if (kind === 'reimb') {
+        item.reimbStatus = ST[t.reimbStatus] ? t.reimbStatus : 'draft';
+      }
+      state.txns.push(item);
+    }
+    state.txns.sort(byTimeDesc);
+
+    var ch = Array.isArray(obj.chat) ? obj.chat : [];
+    state.chat = [];
+    for (var j = 0; j < ch.length; j += 1) {
+      var m = ch[j];
+      if (!m || (m.role !== 'user' && m.role !== 'assistant')) continue;
+      state.chat.push({
+        role: m.role,
+        text: String(m.text || '').slice(0, 4000),
+        at: Number(m.at) || Date.now(),
+        imgs: Number(m.imgs) || 0,
+        err: m.err ? 1 : 0
+      });
+    }
+    if (state.chat.length > 60) state.chat = state.chat.slice(-60);
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(LS_KEY, JSON.stringify(state));
+      storageOk = true;
+      return true;
+    } catch (e) {
+      storageOk = false;
+      toast('存不进去了：手机存储空间可能满了。请到设置里导出备份。', 'err');
+      return false;
+    }
+  }
+
+  /* ==================================================================
+   * 主题
+   * ================================================================== */
+
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+  function applyTheme() {
+    var dark = state.theme === 'dark' || (state.theme === 'auto' && mq && mq.matches);
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  }
+
+  if (mq) {
+    var onMq = function () {
+      if (state.theme === 'auto') applyTheme();
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onMq);
+    else if (mq.addListener) mq.addListener(onMq);
+  }
+
+  /* ==================================================================
+   * 计算
+   * ================================================================== */
+
+  function todaySelfFen() {
+    var k = dayKey(Date.now());
+    var t = 0;
+    for (var i = 0; i < state.txns.length; i += 1) {
+      var x = state.txns[i];
+      if (x.kind === 'self' && dayKey(x.time) === k) t += x.amt;
+    }
+    return t;
+  }
+
+  function reimbBuckets() {
+    var out = {
+      draft: { fen: 0, n: 0 },
+      sent: { fen: 0, n: 0 },
+      paid: { fen: 0, n: 0 },
+      owed: 0 // 公司欠我 = 未提交 + 已提交
+    };
+    for (var i = 0; i < state.txns.length; i += 1) {
+      var x = state.txns[i];
+      if (x.kind !== 'reimb') continue;
+      var s = ST[x.reimbStatus] ? x.reimbStatus : 'draft';
+      out[s].fen += x.amt;
+      out[s].n += 1;
+    }
+    out.owed = out.draft.fen + out.sent.fen;
+    return out;
+  }
+
+  function monthInfo() {
+    var now = new Date();
+    var y = now.getFullYear();
+    var m = now.getMonth();
+    var total = 0;
+    var byCat = {};
+    for (var i = 0; i < state.txns.length; i += 1) {
+      var x = state.txns[i];
+      if (x.kind !== 'self') continue;
+      var d = new Date(x.time);
+      if (d.getFullYear() !== y || d.getMonth() !== m) continue;
+      total += x.amt;
+      byCat[x.cat] = (byCat[x.cat] || 0) + x.amt;
+    }
+    // 日均按「本月已过天数」算（含今天），月初不会被 30 天摊薄
+    var days = now.getDate();
+    return {
+      total: total,
+      byCat: byCat,
+      days: days,
+      avg: days > 0 ? Math.round(total / days) : 0,
+      label: y + ' 年 ' + (m + 1) + ' 月'
+    };
+  }
+
+  /** 近 7 天（含今天）每天的自费合计，旧的在前 */
+  function last7() {
+    var out = [];
+    var base = dayStart();
+    for (var i = 6; i >= 0; i -= 1) {
+      var start = base - i * 86400000;
+      var end = start + 86400000;
+      var fen = 0;
+      for (var j = 0; j < state.txns.length; j += 1) {
+        var x = state.txns[j];
+        if (x.kind !== 'self') continue;
+        if (x.time >= start && x.time < end) fen += x.amt;
+      }
+      out.push({ start: start, fen: fen, today: i === 0, key: dayKey(start) });
+    }
+    return out;
+  }
+
+  /* ==================================================================
+   * Toast / Modal
+   * ================================================================== */
+
+  function toast(msg, kind, action) {
+    var wrap = $('#toastWrap');
+    if (!wrap) return null;
+    var el = document.createElement('div');
+    el.className = 'toast' + (kind ? ' ' + kind : '');
+    var span = document.createElement('span');
+    span.textContent = msg;
+    el.appendChild(span);
+    if (action && action.label) {
+      var b = document.createElement('button');
+      b.textContent = action.label;
+      b.onclick = function () {
+        action.onClick();
+        kill();
+      };
+      el.appendChild(b);
+    }
+    wrap.appendChild(el);
+    var timer = setTimeout(kill, action ? 6000 : 2800);
+    function kill() {
+      clearTimeout(timer);
+      if (el.parentNode) el.parentNode.removeChild(el);
+    }
+    return kill;
+  }
+
+  function confirmBox(title, text, okLabel, danger) {
+    return new Promise(function (resolve) {
+      var m = document.createElement('div');
+      m.id = 'modal';
+      m.innerHTML =
+        '<div class="sheet">' +
+        '<h3>' + esc(title) + '</h3>' +
+        '<p>' + esc(text) + '</p>' +
+        '<div class="acts">' +
+        '<button class="btn ghost" data-no>取消</button>' +
+        '<button class="btn ' + (danger ? 'danger' : '') + '" data-yes>' + esc(okLabel || '确定') + '</button>' +
+        '</div></div>';
+      document.body.appendChild(m);
+      function close(v) {
+        if (m.parentNode) m.parentNode.removeChild(m);
+        resolve(v);
+      }
+      m.querySelector('[data-no]').onclick = function () { close(false); };
+      m.querySelector('[data-yes]').onclick = function () { close(true); };
+      m.onclick = function (e) {
+        if (e.target === m) close(false);
+      };
+    });
+  }
+
+  /* ==================================================================
+   * 路由
+   * ================================================================== */
+
+  var current = 'home';
+  var renderedOnce = {};
+
+  function go(name) {
+    if (!name || !$('#v-' + name)) name = 'home';
+
+    /*
+     * 切页前先把焦点交还给 body。
+     * 不这么做的话：在记账页输入框里打字 → 切到别的 tab → 输入框变成 display:none，
+     * 但焦点还在它身上。手机上表现为「切回来键盘还弹着」，
+     * 而这个隐藏元素随后被重渲染销毁时，部分浏览器还会卡一下。
+     */
+    try {
+      if (document.activeElement && document.activeElement !== document.body && document.activeElement.blur) {
+        document.activeElement.blur();
+      }
+    } catch (e) {}
+
+    current = name;
+    var views = document.querySelectorAll('.view');
+    for (var i = 0; i < views.length; i += 1) {
+      views[i].classList.toggle('on', views[i].id === 'v-' + name);
+    }
+    var btns = document.querySelectorAll('#tabbar button');
+    for (var j = 0; j < btns.length; j += 1) {
+      btns[j].classList.toggle('on', btns[j].getAttribute('data-tab') === name);
+    }
+    // 有输入框的页面只在切换时渲染一次，避免打字时被重渲染打断
+    if (!renderedOnce[name]) {
+      renderView(name);
+      renderedOnce[name] = true;
+    } else {
+      refreshView(name);
+    }
+    try {
+      window.scrollTo(0, 0);
+    } catch (e) {}
+  }
+
+  function renderView(name) {
+    if (name === 'home') renderHome();
+    else if (name === 'add') renderAdd();
+    else if (name === 'reimb') renderReimb();
+    else if (name === 'stats') renderStats();
+    else if (name === 'ai') renderAI();
+    else if (name === 'set') renderSet();
+  }
+
+  /** 数据变了之后刷新当前页（有输入状态的页面不整体重渲染） */
+  function refresh() {
+    if (current === 'ai') {
+      renderAIKeepInput();
+      return;
+    }
+    if (current === 'add' || current === 'set') return; // 别打断正在输入的人
+    renderView(current);
+  }
+
+  function refreshView(name) {
+    if (name === 'ai') {
+      renderAIKeepInput();
+      return;
+    }
+    renderView(name);
+  }
+
+  function buildTabbar() {
+    var nav = $('#tabbar');
+    var html = '';
+    for (var i = 0; i < TABS.length; i += 1) {
+      var t = TABS[i];
+      if (t.id === 'ai' && !aiSupported()) continue; // 环境不支持就不显示入口
+      html +=
+        '<button data-tab="' + t.id + '">' +
+        '<svg viewBox="0 0 24 24">' + t.icon + '</svg>' +
+        '<span>' + t.label + '</span>' +
+        '</button>';
+    }
+    nav.innerHTML = html;
+    nav.addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('button[data-tab]') : null;
+      if (!b) return;
+      go(b.getAttribute('data-tab'));
+    });
+  }
+
+  /* ==================================================================
+   * 全局事件委托
+   *
+   * 为什么不在每个 render 里 addEventListener：
+   * 这些页面每次切回来都会重渲染，而 innerHTML 只换掉子节点、
+   * 不会清掉绑定在容器本身上的监听器 —— 删一次账会触发 N 次（N = 访问过首页的次数）。
+   * 统一挂在 #views 上绑一次，问题就不存在了。
+   * ================================================================== */
+
+  function bindGlobal() {
+    var views = $('#views');
+    views.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t || !t.closest) return;
+
+      var del = t.closest('[data-del]');
+      if (del) {
+        deleteTxn(del.getAttribute('data-del'));
+        return;
+      }
+      var cyc = t.closest('[data-cycle]');
+      if (cyc) {
+        cycleReimb(cyc.getAttribute('data-cycle'));
+        return;
+      }
+    });
+  }
+
+  function findTxn(id) {
+    for (var i = 0; i < state.txns.length; i += 1) {
+      if (state.txns[i].id === id) return state.txns[i];
+    }
+    return null;
+  }
+
+  function deleteTxn(id) {
+    var t = findTxn(id);
+    if (!t) return;
+    var idx = state.txns.indexOf(t);
+    state.txns.splice(idx, 1);
+    save();
+    refresh();
+    toast('已删除 ¥' + money(t.amt), 'ok', {
+      label: '撤销',
+      onClick: function () {
+        state.txns.push(t);
+        state.txns.sort(byTimeDesc);
+        save();
+        refresh();
+      }
+    });
+  }
+
+  function cycleReimb(id) {
+    var t = findTxn(id);
+    if (!t || t.kind !== 'reimb') return;
+    var cur = t.reimbStatus || 'draft';
+    var next = ST_ORDER[(ST_ORDER.indexOf(cur) + 1) % ST_ORDER.length];
+    t.reimbStatus = next;
+    save();
+    renderReimb();
+    toast('已标记为「' + ST[next].name + '」', next === 'paid' ? 'ok' : undefined);
+  }
+
+  /* ==================================================================
+   * 首页
+   * ================================================================== */
+
+  function renderHome() {
+    var el = $('#v-home');
+    var spent = todaySelfFen();
+    var budget = state.budget;
+    var left = budget - spent;
+    var pct = budget > 0 ? spent / budget : 0;
+    var over = left < 0;
+
+    var cls = over ? 'is-over' : pct >= 0.8 ? 'is-warn' : '';
+    var barCls = over ? 'is-over' : pct >= 0.8 ? 'is-warn' : '';
+    var barW = Math.min(100, Math.max(0, pct * 100));
+
+    var sub;
+    if (over) {
+      sub = '超支了 ' + money(-left) + ' 元，今天先别花了';
+    } else if (spent === 0) {
+      sub = '今天还没花钱，预算 ' + money(budget) + ' 元';
+    } else {
+      sub = '已花 ' + money(spent) + ' 元，预算 ' + money(budget) + ' 元';
+    }
+
+    var rb = reimbBuckets();
+
+    // 金额特别长时缩字号，否则 375px 宽的屏幕上会挤出去
+    var leftStr = money(left);
+    var sizeCls = leftStr.length > 6 ? ' xs' : leftStr.length > 5 ? ' sm' : '';
+
+    var html =
+      '<div class="page-head"><h1>今天还能花</h1></div>' +
+
+      '<div class="hero ' + cls + '">' +
+        '<div class="hero-label">💰 今日可用（只算自费）</div>' +
+        '<div class="hero-amt"><span class="cur">¥</span><span class="val' + sizeCls + '">' + leftStr + '</span></div>' +
+        '<div class="hero-sub">' + esc(sub) + '</div>' +
+        '<div class="bar ' + barCls + '"><i style="width:' + barW.toFixed(1) + '%"></i></div>' +
+        '<div class="hero-foot"><span>已用 ' + Math.round(pct * 100) + '%</span><span>预算 ' + money(budget) + ' 元/天</span></div>' +
+      '</div>';
+
+    if (rb.owed > 0) {
+      html +=
+        '<button class="reimb-strip" data-goreimb>' +
+          '<span class="ico">🧾</span>' +
+          '<span class="txt">' +
+            '<span class="t1">待报销（公司欠我，不算可花的钱）</span>' +
+            '<span class="t2">未提交 ' + money(rb.draft.fen) + ' · 已提交 ' + money(rb.sent.fen) + '</span>' +
+          '</span>' +
+          '<span class="amt">' + money(rb.owed) + '</span>' +
+          '<span class="arrow">›</span>' +
+        '</button>';
+    }
+
+    html += '<div class="card"><div class="card-title"><span>最近记录</span><span class="small muted">' +
+      state.txns.length + ' 笔</span></div>';
+
+    if (!state.txns.length) {
+      html += '<div class="empty"><span class="e-ico">📝</span>还没有记录，去「记账」记第一笔吧</div>';
+    } else {
+      html += '<ul class="list">';
+      var n = Math.min(20, state.txns.length);
+      for (var i = 0; i < n; i += 1) html += rowHtml(state.txns[i]);
+      html += '</ul>';
+      if (state.txns.length > n) {
+        html += '<div class="small muted" style="text-align:center;padding-top:10px">还有 ' +
+          (state.txns.length - n) + ' 笔，去「统计」看全部</div>';
+      }
+    }
+    html += '</div>';
+
+    el.innerHTML = html;
+
+    var gr = el.querySelector('[data-goreimb]');
+    if (gr) gr.onclick = function () { go('reimb'); };
+    maybeAlert(pct, left);
+  }
+
+  function rowHtml(t) {
+    var cat = CAT_MAP[t.cat] || CAT_MAP.other;
+    var tag = '';
+    if (t.kind === 'reimb') {
+      var s = ST[t.reimbStatus] || ST.draft;
+      tag = ' <span class="tag ' + s.cls + '">' + s.name + '</span>';
+    }
+    var note = t.note || (t.kind === 'reimb' ? '报销' : cat.name);
+    return (
+      '<li class="row" data-id="' + esc(t.id) + '">' +
+      '<span class="row-ico">' + cat.icon + '</span>' +
+      '<span class="row-main">' +
+      '<span class="row-t1">' + esc(note) + tag + '</span>' +
+      '<span class="row-t2">' + esc(md(t.time)) + ' ' + esc(hhmm(t.time)) + ' · ' + cat.name +
+      (t.src === 'ai' ? ' · AI' : '') + '</span>' +
+      '</span>' +
+      '<span class="row-amt' + (t.kind === 'reimb' ? ' muted' : '') + '">¥' + money(t.amt) + '</span>' +
+      '<button class="row-del" data-del="' + esc(t.id) + '" aria-label="删除">✕</button>' +
+      '</li>'
+    );
+  }
+
+  /** 用到 80% 弹一次提醒；超支也弹一次（文案不同）。一天只弹一次。 */
+  function maybeAlert(pct, left) {
+    var today = dayKey(Date.now());
+    if (state.alerted === today) return;
+    if (pct < 0.8) return;
+    state.alerted = today;
+    save();
+    if (left < 0) {
+      toast('超支了 ¥' + money(-left) + '，今天已经花掉 ' + Math.round(pct * 100) + '% 预算', 'err');
+    } else {
+      toast('今天已用掉 ' + Math.round(pct * 100) + '% 预算，还剩 ¥' + money(left), 'warn');
+    }
+  }
+
+  /* ==================================================================
+   * 记账页
+   * ================================================================== */
+
+  var draft = { kind: 'self', cat: 'food' };
+
+  function renderAdd() {
+    var el = $('#v-add');
+    var cats = '';
+    for (var i = 0; i < CATS.length; i += 1) {
+      var c = CATS[i];
+      cats += '<button data-cat="' + c.id + '"' + (draft.cat === c.id ? ' class="on"' : '') + '>' +
+        '<span class="ci">' + c.icon + '</span><span>' + c.name + '</span></button>';
+    }
+
+    el.innerHTML =
+      '<div class="page-head"><h1>记一笔</h1><p>自费才算进「今天还能花」</p></div>' +
+
+      '<div class="amount-wrap">' +
+        '<div class="amount-label">金额（元）</div>' +
+        '<div class="amount-input"><span>¥</span>' +
+        '<input id="amtInput" type="text" inputmode="decimal" placeholder="0" autocomplete="off" enterkeyhint="done">' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="card">' +
+        '<div class="card-title">这笔是</div>' +
+        '<div class="seg" id="kindSeg">' +
+          '<button data-kind="self"' + (draft.kind === 'self' ? ' class="on"' : '') + '>自费</button>' +
+          '<button data-kind="reimb"' + (draft.kind === 'reimb' ? ' class="on"' : '') + '>报销（垫付）</button>' +
+        '</div>' +
+        '<div class="hint" id="kindHint">' +
+          (draft.kind === 'reimb'
+            ? '报销的钱公司会还你，不计入今日可花。记完到「报销」页管理状态。'
+            : '自己掏的钱，会从今天的预算里扣。') +
+        '</div>' +
+      '</div>' +
+
+      '<div class="card">' +
+        '<div class="card-title">分类</div>' +
+        '<div class="cat-grid" id="catGrid">' + cats + '</div>' +
+      '</div>' +
+
+      '<div class="card">' +
+        '<div class="card-title">备注<span class="small muted">可选</span></div>' +
+        '<input id="noteInput" type="text" maxlength="40" placeholder="例如：美团外卖">' +
+      '</div>' +
+
+      '<button class="btn" id="saveBtn" style="margin-top:4px">记一笔</button>';
+
+    var amt = $('#amtInput');
+    var note = $('#noteInput');
+    var saveBtn = $('#saveBtn');
+
+    $('#kindSeg').addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('[data-kind]') : null;
+      if (!b) return;
+      draft.kind = b.getAttribute('data-kind');
+      var btns = $('#kindSeg').querySelectorAll('button');
+      for (var i = 0; i < btns.length; i += 1) {
+        btns[i].classList.toggle('on', btns[i].getAttribute('data-kind') === draft.kind);
+      }
+      $('#kindHint').textContent =
+        draft.kind === 'reimb'
+          ? '报销的钱公司会还你，不计入今日可花。记完到「报销」页管理状态。'
+          : '自己掏的钱，会从今天的预算里扣。';
+    });
+
+    $('#catGrid').addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('[data-cat]') : null;
+      if (!b) return;
+      draft.cat = b.getAttribute('data-cat');
+      var btns = $('#catGrid').querySelectorAll('button');
+      for (var i = 0; i < btns.length; i += 1) {
+        btns[i].classList.toggle('on', btns[i].getAttribute('data-cat') === draft.cat);
+      }
+    });
+
+    function submit() {
+      var amtFen = toFen(amt.value);
+      if (amtFen <= 0) {
+        toast('先填个金额', 'err');
+        amt.focus();
+        return;
+      }
+      if (amtFen > 100000000) {
+        toast('金额太大了（上限 100 万）', 'err');
+        return;
+      }
+      var t = {
+        id: uid(),
+        amt: amtFen,
+        kind: draft.kind,
+        cat: draft.cat,
+        note: (note.value || '').trim().slice(0, 40),
+        time: Date.now(),
+        src: 'manual'
+      };
+      if (draft.kind === 'reimb') t.reimbStatus = 'draft';
+      state.txns.unshift(t);
+      if (!save()) {
+        state.txns.shift();
+        return;
+      }
+
+      amt.value = '';
+      note.value = '';
+      var left = state.budget - todaySelfFen();
+      if (draft.kind === 'reimb') {
+        toast('已记入报销 ¥' + money(amtFen) + '，记得去提交', 'ok');
+      } else if (left < 0) {
+        toast('记上了，今天超支 ¥' + money(-left), 'err');
+      } else {
+        toast('记上了，今天还能花 ¥' + money(left), 'ok');
+      }
+      maybeAlert(state.budget > 0 ? todaySelfFen() / state.budget : 0, left);
+      amt.focus();
+    }
+
+    saveBtn.addEventListener('click', submit);
+    amt.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') submit();
+    });
+    note.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') submit();
+    });
+
+    setTimeout(function () { try { amt.focus(); } catch (e) {} }, 60);
+  }
+
+  /* ==================================================================
+   * 报销页
+   * ================================================================== */
+
+  function renderReimb() {
+    var el = $('#v-reimb');
+    var rb = reimbBuckets();
+    var items = [];
+    for (var i = 0; i < state.txns.length; i += 1) {
+      if (state.txns[i].kind === 'reimb') items.push(state.txns[i]);
+    }
+
+    var html =
+      '<div class="page-head"><h1>报销</h1><p>公司欠我的钱，不计入可花额度</p></div>' +
+
+      '<div class="stat3">' +
+        '<div><div class="k">未提交</div><div class="v" style="color:var(--warn)">' + money(rb.draft.fen) + '</div></div>' +
+        '<div><div class="k">已提交</div><div class="v" style="color:var(--accent)">' + money(rb.sent.fen) + '</div></div>' +
+        '<div><div class="k">已到账</div><div class="v" style="color:var(--ok)">' + money(rb.paid.fen) + '</div></div>' +
+      '</div>';
+
+    if (!items.length) {
+      html += '<div class="card"><div class="empty"><span class="e-ico">🧾</span>' +
+        '还没有报销记录<br>记账时选「报销（垫付）」就会出现在这里</div></div>';
+    } else {
+      for (var s = 0; s < ST_ORDER.length; s += 1) {
+        var key = ST_ORDER[s];
+        var group = [];
+        for (var j = 0; j < items.length; j += 1) {
+          if ((items[j].reimbStatus || 'draft') === key) group.push(items[j]);
+        }
+        if (!group.length) continue;
+        html += '<div class="card"><div class="card-title"><span>' + ST[key].name +
+          '</span><b>' + money(sum(group)) + ' 元 · ' + group.length + ' 笔</b></div>';
+        for (var k = 0; k < group.length; k += 1) {
+          var t = group[k];
+          var cat = CAT_MAP[t.cat] || CAT_MAP.other;
+          html +=
+            '<div class="reimb-item">' +
+            '<span class="row-ico">' + cat.icon + '</span>' +
+            '<button class="body" data-cycle="' + esc(t.id) + '">' +
+              '<span class="l1">' + esc(t.note || cat.name) +
+              ' <span class="tag ' + ST[key].cls + '">' + ST[key].name + '</span></span>' +
+              '<span class="l2">' + esc(md(t.time)) + ' ' + esc(hhmm(t.time)) + ' · ' + cat.name + '</span>' +
+            '</button>' +
+            '<span class="amt">¥' + money(t.amt) + '</span>' +
+            '<button class="st-btn" data-cycle="' + esc(t.id) + '">切换</button>' +
+            '</div>';
+        }
+        html += '</div>';
+      }
+      html += '<div class="note"><span>💡</span><span>点一条记录或「切换」，状态按「未提交 → 已提交 → 已到账」循环。</span></div>';
+    }
+
+    el.innerHTML = html;
+  }
+
+  /* ==================================================================
+   * 统计页
+   * ================================================================== */
+
+  function renderStats() {
+    var el = $('#v-stats');
+    var m = monthInfo();
+    var rb = reimbBuckets();
+    var week = last7();
+
+    var maxV = state.budget;
+    for (var i = 0; i < week.length; i += 1) {
+      if (week[i].fen > maxV) maxV = week[i].fen;
+    }
+    if (maxV <= 0) maxV = 1;
+
+    var weekTotal = 0;
+    for (var w = 0; w < week.length; w += 1) weekTotal += week[w].fen;
+
+    // 分类占比（只列有金额的，按金额降序）
+    var rows = [];
+    for (var cid in m.byCat) {
+      if (!m.byCat.hasOwnProperty(cid)) continue;
+      rows.push({ id: cid, fen: m.byCat[cid] });
+    }
+    rows.sort(function (a, b) { return b.fen - a.fen; });
+    var maxCat = rows.length ? rows[0].fen : 1;
+
+    var catHtml = '';
+    if (!rows.length) {
+      catHtml = '<div class="empty" style="padding:18px 0"><span class="e-ico">📊</span>本月还没有自费记录</div>';
+    } else {
+      for (var r = 0; r < rows.length; r += 1) {
+        var c = CAT_MAP[rows[r].id] || CAT_MAP.other;
+        var pctOfTotal = m.total > 0 ? Math.round((rows[r].fen / m.total) * 100) : 0;
+        var wPct = Math.max(2, (rows[r].fen / maxCat) * 100);
+        catHtml +=
+          '<div class="cat-bar">' +
+            '<div class="top"><span class="l">' + c.icon + ' ' + c.name + '</span>' +
+            '<span class="r">¥' + money(rows[r].fen) + ' · ' + pctOfTotal + '%</span></div>' +
+            '<div class="track"><i style="width:' + wPct.toFixed(1) + '%"></i></div>' +
+          '</div>';
+      }
+    }
+
+    var chartHtml = '';
+    for (var d = 0; d < week.length; d += 1) {
+      var day = week[d];
+      var over = day.fen > state.budget;
+      var h = day.fen > 0 ? Math.max(4, (day.fen / maxV) * 100) : 0;
+      var dow = ['日', '一', '二', '三', '四', '五', '六'][new Date(day.start).getDay()];
+      chartHtml +=
+        '<div class="col' + (day.today ? ' today' : '') + '">' +
+          '<div class="col-val' + (over ? ' over' : '') + '">' + (day.fen > 0 ? money(day.fen) : '') + '</div>' +
+          '<div class="bar-wrap"><div class="bar' + (over ? ' over' : day.fen === 0 ? ' zero' : '') +
+            '" style="height:' + h.toFixed(1) + '%"></div></div>' +
+          '<div class="col-label">' + (day.today ? '今天' : dow) + '</div>' +
+        '</div>';
+    }
+    var linePos = Math.min(100, (state.budget / maxV) * 100);
+
+    el.innerHTML =
+      '<div class="page-head"><h1>统计</h1><p>' + esc(m.label) + '</p></div>' +
+
+      '<div class="card">' +
+        '<div class="card-title">本月自费</div>' +
+        '<div class="big-stat">' +
+          '<div class="n">¥' + money(m.total) + '</div>' +
+          '<div class="side">日均 ¥' + money(m.avg) + '<br>按 ' + m.days + ' 天算</div>' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="card">' +
+        '<div class="card-title">分类占比</div>' + catHtml +
+      '</div>' +
+
+      '<div class="card">' +
+        '<div class="card-title"><span>近 7 天</span><b>¥' + money(weekTotal) + '</b></div>' +
+        '<div class="chart">' +
+          '<div class="budget-line" style="bottom:' + linePos.toFixed(1) + '%"><span>预算 ' + money(state.budget) + '</span></div>' +
+          chartHtml +
+        '</div>' +
+        '<div class="hint">柱子超过每日预算（虚线）会变红。今天：¥' + money(week[6].fen) + '</div>' +
+      '</div>' +
+
+      '<div class="card">' +
+        '<div class="card-title">报销</div>' +
+        '<div class="cat-bar">' +
+          '<div class="top"><span class="l">未提交</span><span class="r">' + money(rb.draft.fen) + ' 元 · ' + rb.draft.n + ' 笔</span></div>' +
+          '<div class="track"><i style="width:' + pctBar(rb.draft.fen, rb) + '%;background:var(--warn)"></i></div>' +
+        '</div>' +
+        '<div class="cat-bar">' +
+          '<div class="top"><span class="l">已提交</span><span class="r">' + money(rb.sent.fen) + ' 元 · ' + rb.sent.n + ' 笔</span></div>' +
+          '<div class="track"><i style="width:' + pctBar(rb.sent.fen, rb) + '%;background:var(--accent)"></i></div>' +
+        '</div>' +
+        '<div class="cat-bar">' +
+          '<div class="top"><span class="l">已到账</span><span class="r">' + money(rb.paid.fen) + ' 元 · ' + rb.paid.n + ' 笔</span></div>' +
+          '<div class="track"><i style="width:' + pctBar(rb.paid.fen, rb) + '%;background:var(--ok)"></i></div>' +
+        '</div>' +
+        '<div class="hint">公司还欠你 <b>¥' + money(rb.owed) + '</b>（未提交 + 已提交）</div>' +
+      '</div>';
+  }
+
+  function pctBar(fen, rb) {
+    var total = rb.draft.fen + rb.sent.fen + rb.paid.fen;
+    if (total <= 0) return 0;
+    return Math.max(1, (fen / total) * 100);
+  }
+
+  /* ==================================================================
+   * 设置页
+   * ================================================================== */
+
+  function renderSet() {
+    var el = $('#v-set');
+    var aiOn = aiSupported();
+    var cfg = state.ai;
+
+    el.innerHTML =
+      '<div class="page-head"><h1>设置</h1></div>' +
+
+      '<div class="card">' +
+        '<div class="set-row">' +
+          '<div><div class="lbl">每日预算</div><div class="desc">超出会用红色提示</div></div>' +
+          '<div style="display:flex;align-items:center;gap:6px">' +
+            '<input id="budgetInput" type="number" inputmode="decimal" min="1" step="1" value="' + money(state.budget) + '">' +
+            '<span class="muted small">元</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="set-row">' +
+          '<div><div class="lbl">外观</div></div>' +
+          '<div class="theme-seg" id="themeSeg">' +
+            '<button data-theme="auto"' + (state.theme === 'auto' ? ' class="on"' : '') + '>跟随系统</button>' +
+            '<button data-theme="light"' + (state.theme === 'light' ? ' class="on"' : '') + '>浅色</button>' +
+            '<button data-theme="dark"' + (state.theme === 'dark' ? ' class="on"' : '') + '>深色</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="set-row">' +
+          '<div><div class="lbl">记录条数</div></div>' +
+          '<div class="val">' + state.txns.length + ' 笔</div>' +
+        '</div>' +
+        '<div class="set-row">' +
+          '<div><div class="lbl">本地占用</div></div>' +
+          '<div class="val">' + storageSize() + '</div>' +
+        '</div>' +
+      '</div>' +
+
+      (aiOn
+        ? '<div class="card">' +
+            '<div class="card-title">AI 助手</div>' +
+            '<div class="hint" style="margin-top:0;margin-bottom:12px">' +
+              '填一个 OpenAI 兼容的接口就能用。Key 只存在这台手机上，不会发给别人。' +
+            '</div>' +
+            '<div class="field"><label>接口地址</label>' +
+              '<input id="aiEndpoint" type="url" autocomplete="off" spellcheck="false" ' +
+              'placeholder="https://api.openai.com/v1/chat/completions" value="' + esc(cfg.endpoint) + '"></div>' +
+            '<div class="field"><label>API Key</label>' +
+              '<input id="aiKey" type="password" autocomplete="off" spellcheck="false" ' +
+              'placeholder="sk-..." value="' + esc(cfg.key) + '"></div>' +
+            '<div class="field"><label>模型</label>' +
+              '<input id="aiModel" type="text" autocomplete="off" spellcheck="false" ' +
+              'placeholder="gpt-4o-mini" value="' + esc(cfg.model) + '"></div>' +
+            '<button class="btn sm" id="aiSave">保存</button>' +
+            '<div class="hint">截图识别需要模型支持图片输入（如 gpt-4o / gpt-4o-mini / qwen-vl-max / glm-4v）。' +
+            '只支持纯文本的模型可以正常聊天，但发图会失败。</div>' +
+          '</div>'
+        : '<div class="card"><div class="note warn"><span>⚠️</span><span>' +
+          '这个浏览器不支持联网请求，AI 助手用不了。其他功能照常。</span></div></div>') +
+
+      '<div class="card">' +
+        '<div class="card-title">备份</div>' +
+        '<div class="hint" style="margin-top:0;margin-bottom:10px">' +
+          '数据只存在这台手机上。换手机、清缓存前一定要先导出。' +
+        '</div>' +
+        '<div style="display:flex;gap:8px;flex-wrap:wrap">' +
+          '<button class="btn sm" id="expBtn">导出备份</button>' +
+          '<button class="btn sm ghost" id="impBtn">从备份恢复</button>' +
+        '</div>' +
+        '<textarea id="backupArea" rows="5" class="mono small" style="margin-top:12px;display:none" ' +
+        'placeholder="把备份 JSON 粘到这里，然后点下面的「确认恢复」"></textarea>' +
+        '<div id="impActions" style="display:none;margin-top:8px;gap:8px">' +
+          '<button class="btn sm" id="impDo">确认恢复</button>' +
+          '<button class="btn sm ghost" id="impFile">选择文件</button>' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="card">' +
+        '<div class="card-title">危险操作</div>' +
+        '<button class="btn danger" id="clearBtn">清空所有记录</button>' +
+        '<div class="hint">只删账目记录，预算和设置会保留。清空前建议先导出备份。</div>' +
+      '</div>' +
+
+      '<div class="small muted" style="text-align:center;padding:6px 0 20px">' +
+        '数据保存在本机浏览器里，不上传任何服务器' +
+      '</div>';
+
+    bindSet();
+  }
+
+  function storageSize() {
+    try {
+      var raw = localStorage.getItem(LS_KEY) || '';
+      var kb = raw.length / 1024;
+      return kb < 1024 ? Math.round(kb) + ' KB' : (kb / 1024).toFixed(1) + ' MB';
+    } catch (e) {
+      return '—';
+    }
+  }
+
+  function bindSet() {
+    var el = $('#v-set');
+
+    var bi = $('#budgetInput');
+    if (bi) {
+      var commitBudget = function () {
+        var fen = toFen(bi.value);
+        if (fen < 100) {
+          toast('每日预算至少 1 元', 'err');
+          bi.value = money(state.budget);
+          return;
+        }
+        if (fen > 100000000) {
+          toast('预算太大了吧', 'err');
+          bi.value = money(state.budget);
+          return;
+        }
+        if (fen === state.budget) return;
+        state.budget = fen;
+        state.alerted = ''; // 改了预算，80% 提醒重新算
+        save();
+        toast('每日预算改成 ¥' + money(fen), 'ok');
+      };
+      bi.addEventListener('blur', commitBudget);
+      bi.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') { bi.blur(); }
+      });
+    }
+
+    var ts = $('#themeSeg');
+    if (ts) {
+      ts.addEventListener('click', function (e) {
+        var b = e.target.closest ? e.target.closest('[data-theme]') : null;
+        if (!b) return;
+        state.theme = b.getAttribute('data-theme');
+        save();
+        applyTheme();
+        var btns = ts.querySelectorAll('button');
+        for (var i = 0; i < btns.length; i += 1) {
+          btns[i].classList.toggle('on', btns[i].getAttribute('data-theme') === state.theme);
+        }
+      });
+    }
+
+    var aiSave = $('#aiSave');
+    if (aiSave) {
+      aiSave.addEventListener('click', function () {
+        state.ai.endpoint = ($('#aiEndpoint').value || '').trim();
+        state.ai.key = ($('#aiKey').value || '').trim();
+        state.ai.model = ($('#aiModel').value || '').trim() || 'gpt-4o-mini';
+        save();
+        toast('AI 配置已保存', 'ok');
+      });
+    }
+
+    var area = $('#backupArea');
+    var impActions = $('#impActions');
+
+    $('#expBtn').addEventListener('click', function () {
+      var data = {
+        app: 'jizhang',
+        v: 1,
+        exportedAt: new Date().toISOString(),
+        budget: state.budget,
+        txns: state.txns
+      };
+      var text = JSON.stringify(data, null, 2);
+      area.style.display = 'block';
+      area.value = text;
+      area.select();
+      copyText(text).then(function (ok) {
+        toast(ok ? '备份已复制到剪贴板（' + state.txns.length + ' 笔）' : '备份已生成，请长按全选复制', ok ? 'ok' : 'warn');
+      });
+    });
+
+    $('#impBtn').addEventListener('click', function () {
+      var show = area.style.display === 'none';
+      area.style.display = show ? 'block' : 'none';
+      impActions.style.display = show ? 'flex' : 'none';
+      if (show) {
+        area.value = '';
+        area.focus();
+      }
+    });
+
+    $('#impDo').addEventListener('click', function () {
+      var text = (area.value || '').trim();
+      if (!text) { toast('先粘贴备份内容', 'err'); return; }
+      var obj;
+      try {
+        obj = JSON.parse(text);
+      } catch (e) {
+        toast('这段内容不是有效的备份', 'err');
+        return;
+      }
+      restore(obj);
+    });
+
+    $('#impFile').addEventListener('click', function () {
+      var inp = document.createElement('input');
+      inp.type = 'file';
+      inp.accept = '.json,application/json,text/plain';
+      inp.onchange = function () {
+        var f = inp.files && inp.files[0];
+        if (!f) return;
+        var fr = new FileReader();
+        fr.onload = function () {
+          try {
+            restore(JSON.parse(String(fr.result)));
+          } catch (e) {
+            toast('文件内容不是有效的备份', 'err');
+          }
+        };
+        fr.readAsText(f);
+      };
+      inp.click();
+    });
+
+    $('#clearBtn').addEventListener('click', function () {
+      if (!state.txns.length) { toast('本来就是空的', 'ok'); return; }
+      confirmBox(
+        '清空所有记录？',
+        '会删掉 ' + state.txns.length + ' 笔账目，预算和设置保留。\n这个操作没法撤销，建议先导出备份。',
+        '清空',
+        true
+      ).then(function (ok) {
+        if (!ok) return;
+        state.txns = [];
+        state.alerted = '';
+        save();
+        renderedOnce = {};
+        go('home');
+        toast('已清空', 'ok');
+      });
+    });
+  }
+
+  function restore(obj) {
+    if (!obj || typeof obj !== 'object') { toast('备份格式不对', 'err'); return; }
+    var list = Array.isArray(obj.txns) ? obj.txns : Array.isArray(obj.data) ? obj.data : null;
+    if (!list) { toast('这个备份里没有账目数据', 'err'); return; }
+
+    confirmBox(
+      '从备份恢复？',
+      '会用备份里的 ' + list.length + ' 笔记录覆盖当前 ' + state.txns.length + ' 笔。\n当前数据会被替换掉，没法撤销。',
+      '覆盖恢复',
+      true
+    ).then(function (ok) {
+      if (!ok) return;
+      var keepAi = state.ai;
+      var keepTheme = state.theme;
+      state = defaultState();
+      state.ai = keepAi;
+      state.theme = keepTheme;
+      if (obj.budget) state.budget = Math.max(100, Math.round(Number(obj.budget) || 8000));
+
+      for (var i = 0; i < list.length; i += 1) {
+        var t = list[i];
+        if (!t) continue;
+        var amt = Math.round(Number(t.amt) || 0);
+        if (amt <= 0) continue;
+        var kind = t.kind === 'reimb' ? 'reimb' : 'self';
+        var item = {
+          id: String(t.id || uid()),
+          amt: amt,
+          kind: kind,
+          cat: CAT_MAP[t.cat] ? t.cat : 'other',
+          note: typeof t.note === 'string' ? t.note.slice(0, 40) : '',
+          time: Number(t.time) || Date.now(),
+          src: t.src === 'ai' ? 'ai' : 'manual'
+        };
+        if (kind === 'reimb') item.reimbStatus = ST[t.reimbStatus] ? t.reimbStatus : 'draft';
+        state.txns.push(item);
+      }
+      state.txns.sort(byTimeDesc);
+      save();
+      renderedOnce = {};
+      applyTheme();
+      go('home');
+      toast('已恢复 ' + state.txns.length + ' 笔', 'ok');
+    });
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(
+        function () { return true; },
+        function () { return legacyCopy(text); }
+      );
+    }
+    return Promise.resolve(legacyCopy(text));
+  }
+
+  function legacyCopy(text) {
+    var ta = null;
+    try {
+      ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      var ok = document.execCommand('copy');
+      return !!ok;
+    } catch (e) {
+      return false;
+    } finally {
+      if (ta && ta.parentNode) ta.parentNode.removeChild(ta);
+    }
+  }
+
+  /* ==================================================================
+   * AI 助手
+   * ================================================================== */
+
+  var AI_TIMEOUT = 90000;
+  var pending = [];      // 待确认记录
+  var aiBusy = false;
+  var attach = [];       // 待发送的图片 dataURL
+
+  function aiSupported() {
+    return typeof fetch === 'function' && typeof Promise === 'function';
+  }
+
+  function imageSupported() {
+    return !!(window.FileReader && document.createElement('canvas').getContext);
+  }
+
+  function aiReady() {
+    return !!(state.ai.endpoint && state.ai.key);
+  }
+
+  /* ---------- 上下文摘要：AI 每次提问都重新生成，保证看到的是最新数据 ---------- */
+
+  function buildContext() {
+    var today = todaySelfFen();
+    var left = state.budget - today;
+    var pct = state.budget > 0 ? Math.round((today / state.budget) * 100) : 0;
+    var m = monthInfo();
+    var rb = reimbBuckets();
+
+    var L = [];
+    L.push('【预算】每日 ' + money(state.budget) + ' 元');
+    L.push('【今天】' + dayKey(Date.now()) + '，自费已花 ' + money(today) + ' 元，还剩 ' +
+      money(left) + ' 元（用了 ' + pct + '%）' + (left < 0 ? '，已超支 ' + money(-left) + ' 元' : ''));
+    L.push('【本月】自费合计 ' + money(m.total) + ' 元，日均 ' + money(m.avg) + ' 元（按 ' + m.days + ' 天算）');
+
+    var cats = [];
+    for (var cid in m.byCat) {
+      if (!m.byCat.hasOwnProperty(cid)) continue;
+      var c = CAT_MAP[cid] || CAT_MAP.other;
+      cats.push(c.name + ' ' + money(m.byCat[cid]));
+    }
+    L.push('【本月分类】' + (cats.length ? cats.join(' / ') : '无'));
+
+    L.push('【报销】未提交 ' + money(rb.draft.fen) + ' 元（' + rb.draft.n + ' 笔）、已提交 ' +
+      money(rb.sent.fen) + ' 元（' + rb.sent.n + ' 笔）、已到账 ' + money(rb.paid.fen) +
+      ' 元（' + rb.paid.n + ' 笔）；公司还欠 ' + money(rb.owed) + ' 元');
+
+    L.push('【最近 40 笔】（日期 时间 / 类型 / 分类 / 金额 / 备注）');
+    var n = Math.min(40, state.txns.length);
+    if (!n) L.push('（还没有记录）');
+    for (var i = 0; i < n; i += 1) {
+      var t = state.txns[i];
+      var cat = CAT_MAP[t.cat] || CAT_MAP.other;
+      var kind = t.kind === 'reimb' ? '报销' + (ST[t.reimbStatus] ? ST[t.reimbStatus].name : '') : '自费';
+      L.push(md(t.time) + ' ' + hhmm(t.time) + ' / ' + kind + ' / ' + cat.name + ' / ' + money(t.amt) + ' / ' + (t.note || '-'));
+    }
+    return L.join('\n');
+  }
+
+  function systemPrompt() {
+    return [
+      '你是一个中文个人记账助手。用户会问关于花销的问题，也可能发付款截图让你记账。',
+      '',
+      '你必须只输出一个 JSON 对象，不要任何解释文字，不要用 markdown 代码块包裹：',
+      '{"reply":"给用户看的中文回答","records":[{"amt":35.5,"kind":"self","cat":"food","note":"商家名","time":"2026-10-26 12:30"}]}',
+      '',
+      '规则：',
+      '1. amt 单位是元，纯数字，不要货币符号。看不清的金额**绝对不要猜**：那一笔不要放进 records，并在 reply 里说明哪一笔看不清、请用户自己补。',
+      '2. kind 只能是 "self" 或 "reimb"。默认 "self"。只有用户明确说"报销""垫付""公司"时才用 "reimb"。',
+      '3. cat 只能是 food（餐饮）/ shop（网购）/ traffic（交通）/ daily（日用）/ fun（娱乐）/ travel（差旅）/ other（其他）之一。',
+      '4. note 写商家名或简短描述，不超过 20 字。',
+      '5. time 用截图里的交易时间，格式 "YYYY-MM-DD HH:mm"。看不清就填空字符串 ""。',
+      '6. 只记**支出**。收入、退款、转账、还款、余额变动一律不记。',
+      '7. 用户只是提问、没有截图、或截图里没有支出时，records 返回空数组 []。',
+      '8. reply 用简体中文，简短直接，可以引用下面的真实数据来回答（比如算给他看超没超）。不要编造数据。',
+      '9. 同一张截图里重复出现的同一笔（比如列表里既有明细又有汇总）只记一次。',
+      '',
+      '用户当前的真实数据：',
+      buildContext()
+    ].join('\n');
+  }
+
+  /* ---------- 渲染 ---------- */
+
+  function renderAI() {
+    var el = $('#v-ai');
+
+    if (!aiReady()) {
+      el.innerHTML =
+        '<div class="page-head"><h1>AI 助手</h1></div>' +
+        '<div class="card">' +
+          '<div class="empty" style="padding:26px 10px">' +
+            '<span class="e-ico">✨</span>' +
+            '配一个 AI 接口就能用了<br>' +
+            '<span class="small muted">可以问「今晚点 60 元外卖会超吗」，也可以发付款截图让它帮你记账</span>' +
+          '</div>' +
+          '<button class="btn" id="goSetAI">去设置里填</button>' +
+          '<div class="hint" style="text-align:center">支持任何 OpenAI 兼容接口（OpenAI / 通义 / 智谱 / DeepSeek 等）</div>' +
+        '</div>';
+      var b = $('#goSetAI');
+      if (b) b.onclick = function () { go('set'); };
+      return;
+    }
+
+    el.innerHTML =
+      '<div class="ai-wrap">' +
+        '<div class="page-head"><h1>AI 助手</h1>' +
+          '<p>能看你的预算和最近 40 笔，也能帮你从截图记账</p></div>' +
+        '<div class="ai-msgs" id="aiMsgs"></div>' +
+        '<div id="aiPendingBox"></div>' +
+        '<div class="thumbs" id="aiThumbs" style="display:none"></div>' +
+        '<div class="ai-composer">' +
+          '<div class="box">' +
+            (imageSupported()
+              ? '<button class="ibtn" id="aiPick" aria-label="发截图">' +
+                '<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' +
+                '<rect x="3.2" y="5" width="17.6" height="14" rx="3"/><circle cx="8.6" cy="10" r="1.6"/>' +
+                '<path d="M4 17l4.6-4.2 3.2 2.8 3-2.6L20 17"/></svg></button>'
+              : '') +
+            '<textarea id="aiInput" rows="1" placeholder="问点什么，或发截图记账…"></textarea>' +
+          '</div>' +
+          '<button class="send" id="aiSend" aria-label="发送">' +
+            '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+            '<path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>' +
+          '</button>' +
+        '</div>' +
+      '</div>';
+
+    bindAI();
+    renderMsgs();
+    renderPending();
+  }
+
+  /** 只刷新消息和待确认区，不动输入框（发送后调用） */
+  function renderAIKeepInput() {
+    if (!aiReady()) { renderView('ai'); return; }
+    if (!$('#aiMsgs')) { renderView('ai'); return; }
+    renderMsgs();
+    renderPending();
+  }
+
+  function renderMsgs() {
+    var box = $('#aiMsgs');
+    if (!box) return;
+
+    if (!state.chat.length) {
+      box.innerHTML =
+        '<div class="msg ai">你好，我是你的记账助手。\n\n' +
+        '你可以问我：\n· 这周为什么超预算了？\n· 今晚点 60 元外卖会超吗？\n· 这个月哪类花得最多？\n\n' +
+        '也可以直接发微信/支付宝的付款截图，我会把每一笔支出列出来，你确认后再入账。</div>';
+      return;
+    }
+
+    var html = '';
+    for (var i = 0; i < state.chat.length; i += 1) {
+      var m = state.chat[i];
+      if (m.role === 'user') {
+        html += '<div class="msg me">' +
+          (m.imgs ? '<div class="imgs-note">📷 ' + m.imgs + ' 张截图</div>' : '') +
+          esc(m.text) + '</div>';
+      } else {
+        html += '<div class="msg ' + (m.err ? 'err' : 'ai') + '">' + esc(m.text) + '</div>';
+      }
+    }
+    box.innerHTML = html;
+    scrollMsgs();
+  }
+
+  function scrollMsgs() {
+    var wrap = $('.ai-wrap');
+    if (!wrap) return;
+    setTimeout(function () {
+      try { window.scrollTo(0, document.body.scrollHeight); } catch (e) {}
+    }, 40);
+  }
+
+  function renderPending() {
+    var box = $('#aiPendingBox');
+    if (!box) return;
+    if (!pending.length) { box.innerHTML = ''; return; }
+
+    var rows = '';
+    for (var i = 0; i < pending.length; i += 1) {
+      var p = pending[i];
+      var cat = CAT_MAP[p.cat] || CAT_MAP.other;
+      rows +=
+        '<div class="pend-item">' +
+          '<div class="pm">' +
+            '<div class="p1"><span class="a">¥' + money(p.amt) + '</span>' +
+            (p.dup ? '<span class="tag dup">可能重复</span>' : '') +
+            '</div>' +
+            '<div class="p2">' + cat.icon + ' ' + cat.name + ' · ' +
+              esc(p.note || '无备注') + ' · ' + esc(md(p.time) + ' ' + hhmm(p.time)) + '</div>' +
+          '</div>' +
+          '<button class="kbtn' + (p.kind === 'reimb' ? ' reimb' : '') + '" data-k="' + i + '">' +
+            (p.kind === 'reimb' ? '报销' : '自费') + '</button>' +
+          '<button class="xbtn" data-x="' + i + '">✕</button>' +
+        '</div>';
+    }
+
+    var total = 0;
+    for (var j = 0; j < pending.length; j += 1) total += pending[j].amt;
+
+    box.innerHTML =
+      '<div class="pend">' +
+        '<div class="pend-head"><b>识别到 ' + pending.length + ' 笔</b><span class="small muted">合计 ¥' + money(total) + '</span></div>' +
+        '<div class="pend-sub">确认没问题再入账。点「自费/报销」可以切换，点 ✕ 删掉。</div>' +
+        rows +
+        '<div class="pend-foot">' +
+          '<button class="btn sm" id="pendSave" style="flex:1">全部记入</button>' +
+          '<button class="btn sm ghost" id="pendDrop" style="flex:none">都不要</button>' +
+        '</div>' +
+      '</div>';
+
+    box.querySelectorAll('[data-k]').forEach(function (b) {
+      b.onclick = function () {
+        var i2 = Number(b.getAttribute('data-k'));
+        pending[i2].kind = pending[i2].kind === 'reimb' ? 'self' : 'reimb';
+        renderPending();
+      };
+    });
+    box.querySelectorAll('[data-x]').forEach(function (b) {
+      b.onclick = function () {
+        var i2 = Number(b.getAttribute('data-x'));
+        pending.splice(i2, 1);
+        renderPending();
+      };
+    });
+
+    var saveBtn = $('#pendSave');
+    if (saveBtn) saveBtn.onclick = commitPending;
+    var dropBtn = $('#pendDrop');
+    if (dropBtn) dropBtn.onclick = function () {
+      pending = [];
+      renderPending();
+      toast('都丢掉了，账本没动', 'ok');
+    };
+  }
+
+  function commitPending() {
+    if (!pending.length) return;
+    var n = 0;
+    var selfSum = 0;
+    for (var i = 0; i < pending.length; i += 1) {
+      var p = pending[i];
+      var t = {
+        id: uid(),
+        amt: p.amt,
+        kind: p.kind,
+        cat: p.cat,
+        note: p.note || '',
+        time: p.time,
+        src: 'ai'
+      };
+      if (p.kind === 'reimb') t.reimbStatus = 'draft';
+      state.txns.push(t);
+      if (p.kind === 'self') selfSum += p.amt;
+      n += 1;
+    }
+    state.txns.sort(byTimeDesc);
+    if (!save()) return;
+    pending = [];
+    renderPending();
+    renderedOnce.home = false;
+    renderedOnce.reimb = false;
+    renderedOnce.stats = false;
+    var left = state.budget - todaySelfFen();
+    toast('已记入 ' + n + ' 笔' + (selfSum ? '，今天还能花 ¥' + money(left) : ''), 'ok');
+  }
+
+  function bindAI() {
+    var ta = $('#aiInput');
+    var sendBtn = $('#aiSend');
+    var pick = $('#aiPick');
+
+    function autoGrow() {
+      if (!ta) return;
+      ta.style.height = 'auto';
+      ta.style.height = Math.min(96, ta.scrollHeight) + 'px';
+    }
+
+    if (ta) {
+      ta.addEventListener('input', autoGrow);
+      ta.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) {
+          e.preventDefault();
+          send();
+        }
+      });
+    }
+
+    if (sendBtn) sendBtn.onclick = send;
+
+    if (pick && imageSupported()) {
+      pick.onclick = function () { $('#filePick').click(); };
+    }
+
+    function send() {
+      if (aiBusy) return;
+      var text = (ta.value || '').trim();
+      if (!text && !attach.length) return;
+      ta.value = '';
+      autoGrow();
+      ask(text, attach.slice());
+    }
+  }
+
+  /* ---------- 图片处理 ---------- */
+
+  function shrinkImage(file, maxSide, quality) {
+    return new Promise(function (resolve, reject) {
+      var fr = new FileReader();
+      fr.onerror = function () { reject(new Error('图片读不出来')); };
+      fr.onload = function () {
+        var img = new Image();
+        img.onerror = function () { reject(new Error('图片格式不支持')); };
+        img.onload = function () {
+          var w = img.naturalWidth || img.width;
+          var h = img.naturalHeight || img.height;
+          if (!w || !h) { reject(new Error('图片尺寸读不出来')); return; }
+          var k = Math.min(1, maxSide / Math.max(w, h));
+          var cw = Math.max(1, Math.round(w * k));
+          var ch = Math.max(1, Math.round(h * k));
+          var cv = document.createElement('canvas');
+          cv.width = cw;
+          cv.height = ch;
+          var ctx = cv.getContext('2d');
+          ctx.fillStyle = '#fff'; // PNG 透明底转 JPEG 会变黑，先铺白
+          ctx.fillRect(0, 0, cw, ch);
+          ctx.drawImage(img, 0, 0, cw, ch);
+          try {
+            resolve(cv.toDataURL('image/jpeg', quality));
+          } catch (e) {
+            reject(new Error('图片处理失败'));
+          }
+        };
+        img.src = String(fr.result);
+      };
+      fr.readAsDataURL(file);
+    });
+  }
+
+  function onFilesPicked(files) {
+    var list = Array.prototype.slice.call(files || []);
+    if (!list.length) return;
+    if (attach.length + list.length > 3) {
+      toast('一次最多发 3 张', 'err');
+      list = list.slice(0, 3 - attach.length);
+    }
+    var jobs = list.map(function (f) { return shrinkImage(f, 1400, 0.82); });
+    Promise.all(jobs).then(function (urls) {
+      attach = attach.concat(urls);
+      renderThumbs();
+    }).catch(function (e) {
+      toast(e && e.message ? e.message : '图片处理失败', 'err');
+    });
+  }
+
+  function renderThumbs() {
+    var box = $('#aiThumbs');
+    if (!box) return;
+    if (!attach.length) {
+      box.style.display = 'none';
+      box.innerHTML = '';
+      return;
+    }
+    box.style.display = 'flex';
+    var html = '';
+    for (var i = 0; i < attach.length; i += 1) {
+      html += '<div class="th"><img src="' + attach[i] + '" alt=""><button data-rm="' + i + '">✕</button></div>';
+    }
+    box.innerHTML = html;
+    box.querySelectorAll('[data-rm]').forEach(function (b) {
+      b.onclick = function () {
+        attach.splice(Number(b.getAttribute('data-rm')), 1);
+        renderThumbs();
+      };
+    });
+  }
+
+  /* ---------- 请求 ---------- */
+
+  function ask(text, images) {
+    if (aiBusy) return;
+    aiBusy = true;
+    attach = [];
+    renderThumbs();
+
+    var label = text || (images.length ? '（发了 ' + images.length + ' 张截图）' : '');
+    state.chat.push({ role: 'user', text: label, at: Date.now(), imgs: images.length });
+    if (state.chat.length > 60) state.chat = state.chat.slice(-60);
+    save();
+    renderMsgs();
+    renderPending();
+
+    var sendBtn = $('#aiSend');
+    if (sendBtn) sendBtn.disabled = true;
+
+    // 打字指示
+    var msgs = $('#aiMsgs');
+    var tip = document.createElement('div');
+    tip.className = 'msg ai';
+    tip.innerHTML = '<span class="typing"><i></i><i></i><i></i></span>';
+    if (msgs) msgs.appendChild(tip);
+    scrollMsgs();
+
+    callAI(text, images)
+      .then(function (result) {
+        if (tip.parentNode) tip.parentNode.removeChild(tip);
+        state.chat.push({ role: 'assistant', text: result.reply, at: Date.now(), imgs: 0 });
+        if (state.chat.length > 60) state.chat = state.chat.slice(-60);
+        pending = result.records;
+        save();
+        renderMsgs();
+        renderPending();
+      })
+      .catch(function (err) {
+        if (tip.parentNode) tip.parentNode.removeChild(tip);
+        var msg = err && err.message ? err.message : '出了点问题，再试一次。';
+        state.chat.push({ role: 'assistant', text: msg, at: Date.now(), imgs: 0, err: true });
+        save();
+        renderMsgs();
+        renderPending();
+      })
+      .then(function () {
+        aiBusy = false;
+        if (sendBtn) sendBtn.disabled = false;
+      });
+  }
+
+  function callAI(text, images) {
+    var content;
+    if (images.length) {
+      content = [];
+      if (text) content.push({ type: 'text', text: text });
+      for (var i = 0; i < images.length; i += 1) {
+        content.push({ type: 'image_url', image_url: { url: images[i] } });
+      }
+    } else {
+      content = text;
+    }
+
+    // 历史只带文字：图片 base64 太占 token，而且之前结论已经写进文字里了
+    var history = [];
+    for (var h = 0; h < state.chat.length - 1; h += 1) {
+      var m = state.chat[h];
+      if (m.err) continue; // 错误提示不是 AI 说的话，别喂回去
+      history.push({ role: m.role, content: m.text });
+    }
+    if (history.length > 12) history = history.slice(-12);
+
+    var body = {
+      model: state.ai.model || 'gpt-4o-mini',
+      messages: [{ role: 'system', content: systemPrompt() }]
+        .concat(history)
+        .concat([{ role: 'user', content: content }]),
+      temperature: 0.25
+    };
+
+    var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+    var timer = setTimeout(function () {
+      if (ctrl) ctrl.abort();
+    }, AI_TIMEOUT);
+
+    return fetch(state.ai.endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + state.ai.key
+      },
+      body: JSON.stringify(body),
+      signal: ctrl ? ctrl.signal : undefined
+    })
+      .then(function (res) {
+        clearTimeout(timer);
+        if (!res.ok) throw makeHttpError(res.status);
+        return res.json().catch(function () {
+          throw new Error('接口返回的不是 JSON。检查一下地址是不是填成了网页地址（应该指向 …/v1/chat/completions）。');
+        });
+      })
+      .then(function (data) {
+        var raw = '';
+        try {
+          raw = data.choices[0].message.content;
+        } catch (e) {
+          raw = '';
+        }
+        if (typeof raw !== 'string' || !raw.trim()) {
+          throw new Error('AI 返回了空内容。可能是模型不支持图片，或者被内容审查拦了。');
+        }
+        var obj = parseAIJson(raw);
+        if (!obj) {
+          throw new Error('AI 返回的格式看不懂（不是约定的 JSON）。原文：\n' + raw.slice(0, 300));
+        }
+        var reply = typeof obj.reply === 'string' && obj.reply.trim()
+          ? obj.reply.trim()
+          : '（AI 没有给出文字说明）';
+        var records = [];
+        if (Array.isArray(obj.records)) {
+          for (var i = 0; i < obj.records.length; i += 1) {
+            var r = normRecord(obj.records[i]);
+            if (r) {
+              r.dup = isDup(r);
+              records.push(r);
+            }
+          }
+        }
+        // 有图但一笔都没识别出来：明确说一句，别让用户以为记上了
+        if (images.length && !records.length && obj.records && obj.records.length) {
+          reply += '\n\n（有 ' + obj.records.length + ' 条因为金额看不清被跳过了，请手动补。）';
+        }
+        return { reply: reply, records: records };
+      })
+      .catch(function (e) {
+        clearTimeout(timer);
+        if (e && e.name === 'AbortError') {
+          throw new Error('AI 响应超时了（90 秒）。可能是网络慢，或者模型太慢，稍后再试。');
+        }
+        throw e;
+      });
+  }
+
+  function makeHttpError(status) {
+    var msg;
+    if (status === 401) {
+      msg = '登录过期或 API Key 不对（401）。去设置里重新填一下 Key。';
+    } else if (status === 403) {
+      msg = '没有权限（403）。这个 Key 可能没开通这个模型，或者余额不足。';
+    } else if (status === 404) {
+      msg = '接口地址不对（404）。检查一下是不是漏了 /v1/chat/completions。';
+    } else if (status === 413) {
+      msg = '截图太大了（413）。少发几张，或者截小一点。';
+    } else if (status === 429) {
+      msg = '请求太频繁或额度用完了（429）。等一分钟再试。';
+    } else if (status === 400) {
+      msg = '请求被拒（400）。常见原因：模型不支持图片输入，或者模型名写错了。';
+    } else if (status >= 500) {
+      msg = 'AI 服务出问题了（' + status + '），不是你的问题，等会儿再试。';
+    } else {
+      msg = '请求失败（' + status + '）。';
+    }
+    var err = new Error(msg);
+    err.status = status;
+    return err;
+  }
+
+  /** AI 有时会用 ```json 包裹，或者前后加话，这里尽量捞出来 */
+  function parseAIJson(text) {
+    var s = String(text || '').trim();
+    var fence = /```(?:json)?\s*([\s\S]*?)```/i.exec(s);
+    if (fence) s = fence[1].trim();
+    try {
+      var o = JSON.parse(s);
+      if (o && typeof o === 'object') return o;
+    } catch (e) {}
+    var a = s.indexOf('{');
+    var b = s.lastIndexOf('}');
+    if (a >= 0 && b > a) {
+      try {
+        var o2 = JSON.parse(s.slice(a, b + 1));
+        if (o2 && typeof o2 === 'object') return o2;
+      } catch (e) {}
+    }
+    return null;
+  }
+
+  /** AI 给的一条记录 → 内部结构。任何一项不合法就返回 null（跳过，不猜） */
+  function normRecord(r) {
+    if (!r || typeof r !== 'object') return null;
+    var yuan = Number(r.amt);
+    if (!isFinite(yuan) || yuan <= 0) return null;
+    var amt = Math.round(yuan * 100);
+    if (amt <= 0 || amt > 100000000) return null;
+
+    var kind = r.kind === 'reimb' ? 'reimb' : 'self';
+    var cat = CAT_MAP[r.cat] ? r.cat : 'other';
+    var note = typeof r.note === 'string' ? r.note.trim().slice(0, 20) : '';
+    return { amt: amt, kind: kind, cat: cat, note: note, time: parseAITime(r.time) };
+  }
+
+  /** 'YYYY-MM-DD HH:mm' / 'YYYY-MM-DD' / 空 → 时间戳。空就用现在。 */
+  function parseAITime(v) {
+    var s = String(v || '').trim();
+    var m = /^(\d{4})-(\d{1,2})-(\d{1,2})(?:[ T](\d{1,2}):(\d{2}))?/.exec(s);
+    if (!m) return Date.now();
+    var d = new Date(
+      Number(m[1]), Number(m[2]) - 1, Number(m[3]),
+      m[4] ? Number(m[4]) : 12, m[5] ? Number(m[5]) : 0, 0, 0
+    );
+    var t = d.getTime();
+    if (!isFinite(t)) return Date.now();
+    // 明显不对的时间（未来太多 / 十年前）就不要了，用现在
+    var now = Date.now();
+    if (t > now + 86400000 || t < now - 5 * 365 * 86400000) return now;
+    return t;
+  }
+
+  /** 金额相同 + 时间差 48 小时内 → 提示可能重复 */
+  function isDup(rec) {
+    for (var i = 0; i < state.txns.length; i += 1) {
+      var t = state.txns[i];
+      if (t.amt !== rec.amt) continue;
+      if (Math.abs(t.time - rec.time) <= 48 * 3600 * 1000) return true;
+    }
+    return false;
+  }
+
+  /* ==================================================================
+   * 启动
+   * ================================================================== */
+
+  function init() {
+    load();
+    applyTheme();
+    buildTabbar();
+    bindGlobal();
+
+    if (loadBroken) {
+      toast('本机数据读不出来（可能损坏了）。原始数据已另存一份，先别急着记新账，到设置里看看。', 'err', {
+        label: '知道了',
+        onClick: function () {}
+      });
+    }
+
+    var fp = $('#filePick');
+    if (fp) {
+      fp.addEventListener('change', function () {
+        onFilesPicked(fp.files);
+        fp.value = '';
+      });
+    }
+
+    // hash 路由：直接打开 #add 也能进对应页面（从主屏幕/书签进来）
+    var h = (location.hash || '').replace('#', '');
+    go(h || 'home');
+
+    window.addEventListener('hashchange', function () {
+      var n = (location.hash || '').replace('#', '') || 'home';
+      if (n !== current) go(n);
+    });
+
+    // 回到前台时刷新首页（可能在别的 App 里待了很久，跨天了）
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) {
+        if (current === 'home') renderHome();
+        else if (current === 'stats') renderStats();
+        else if (current === 'reimb') renderReimb();
+      }
+    });
+
+    if (!storageOk) {
+      toast('浏览器不让存数据（可能是无痕模式）。关掉无痕再用，否则记的账会丢。', 'err');
+    }
+  }
+
+  // 导航切换时同步 hash，方便刷新/加书签
+  var _go = go;
+  go = function (name) {
+    _go(name);
+    try {
+      if (('#' + name) !== location.hash) history.replaceState(null, '', '#' + name);
+    } catch (e) {}
+  };
+
+  init();
+})();
+</script>
+</body>
+</html>
